@@ -1,0 +1,1034 @@
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+font-family: "Raleway", Helvetica, Arial, sans-serif;
+}
+
+p {
+line-height: 1.55;
+color: #333;
+font-size: 400;
+font-family: "Raleway", Helvetica, Arial, sans-serif;
+}
+
+h1 {
+font-size: 62px;
+}
+
+h2 {
+font-size: 30px;
+margin-bottom: 65px;
+}
+
+h3 {
+font-size: 24px;
+}
+
+h4 {
+font-size: 18px;
+}
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
+a {
+transition: 0.5s;
+text-decoration: none;
+color: #199EB8;
+}
+
+a:hover {
+color: #23c2e1;
+}
+
+/*--------------------------------------------------------------
+# Back to top button
+--------------------------------------------------------------*/
+.back-to-top {
+position: fixed;
+visibility: hidden;
+opacity: 0;
+right: 15px;
+bottom: 15px;
+z-index: 996;
+background: #199EB8;
+width: 40px;
+height: 40px;
+border-radius: 50px;
+transition: all 0.4s;
+}
+
+.back-to-top i {
+font-size: 28px;
+color: #fff;
+line-height: 0;
+}
+
+.back-to-top:hover {
+background: #1ebddc;
+color: #fff;
+}
+
+.back-to-top.active {
+visibility: visible;
+opacity: 1;
+}
+
+/* ==================================================
+Elements
+================================================== */
+.btn {
+background-color: #199EB8;
+font-family: "Roboto", Helvetica, Arial, sans-serif;
+font-weight: 800;
+color: #fff;
+padding: 15px 45px;
+border-radius: 50px;
+}
+
+.btn:hover {
+background-color: #E04F00;
+color: #fff;
+}
+
+.btn:focus {
+color: #fff;
+}
+
+.btn-ghost {
+border: 3px solid #fff;
+background-color: transparent;
+}
+
+.btn-ghost:hover {
+background-color: #fff;
+color: #199EB8;
+}
+
+section {
+padding: 85px 0;
+}
+
+.card {
+position: relative;
+padding: 0;
+border: 0;
+border-radius: 0;
+margin: 0;
+overflow: hidden;
+}
+
+a:hover {
+text-decoration: none !important;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+background: #199EB8;
+height: 70px;
+}
+
+#header #logo h1 {
+font-size: 32px;
+margin: 0;
+line-height: 0;
+font-family: "Raleway", Helvetica, Arial, sans-serif;
+font-weight: 700;
+letter-spacing: 3px;
+text-transform: uppercase;
+}
+
+#header #logo h1 a,
+#header #logo h1 a:hover {
+color: #fff;
+}
+
+#header #logo img {
+padding: 0;
+margin: 0;
+max-height: 40px;
+}
+
+.scrolled-offset {
+margin-top: 70px;
+}
+
+/*--------------------------------------------------------------
+# Header Social Links
+--------------------------------------------------------------*/
+.header-social-links {
+margin: 0 0 0 30px;
+}
+
+.header-social-links a {
+color: rgba(255, 255, 255, 0.8);
+padding-left: 8px;
+display: inline-block;
+line-height: 0px;
+transition: 0.3s;
+}
+
+.header-social-links a i {
+line-height: 0;
+font-size: 24px;
+}
+
+.header-social-links a:hover {
+color: #fff;
+}
+
+@media (max-width: 768px) {
+.header-social-links {
+margin: 0 15px 0 0;
+}
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/**
+* Desktop Navigation 
+*/
+.navbar {
+padding: 0;
+}
+
+.navbar  {
+margin: 0;
+padding: 0;
+display: flex;
+list-style: none;
+align-items: center;
+}
+
+.navbar a {
+position: relative;
+}
+
+.navbar a,
+.navbar a:focus {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 10px 0 10px 30px;
+font-family: "Raleway", Helvetica, Arial, sans-serif;
+font-size: 15px;
+font-weight: 600;
+color: rgba(255, 255, 255, 0.8);
+white-space: nowrap;
+transition: 0.3s;
+}
+
+.navbar a i,
+.navbar a:focus i {
+font-size: 12px;
+line-height: 0;
+margin-left: 5px;
+}
+
+.navbar a:hover,
+.navbar .active,
+.navbar .active:focus,
+.navbar li:hover>a {
+color: #fff;
+}
+
+.navbar .dropdown a{
+display: block;
+position: absolute;
+left: 30px;
+top: calc(100% + 30px);
+margin: 0;
+padding: 10px 0;
+z-index: 99;
+opacity: 0;
+visibility: hidden;
+background: #fff;
+box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+transition: 0.3s;
+border-radius: 4px;
+}
+
+.navbar .dropdown  {
+min-width: 200px;
+}
+
+.navbar .dropdown  a {
+padding: 10px 20px;
+color: #555;
+}
+
+.navbar .dropdown  a i {
+font-size: 12px;
+}
+
+.navbar .dropdown  a:hover,
+.navbar .dropdown .active:hover,
+.navbar .dropdown  li:hover>a {
+color: #199EB8;
+}
+
+.navbar .dropdown:hover>a {
+opacity: 1;
+top: 100%;
+visibility: visible;
+}
+
+.navbar .dropdown .dropdown a {
+top: 0;
+left: calc(100% - 30px);
+visibility: hidden;
+}
+
+.navbar .dropdown .dropdown:hover>a {
+opacity: 1;
+top: 0;
+left: 100%;
+visibility: visible;
+}
+
+@media (max-width: 1366px) {
+.navbar .dropdown .dropdown ul {
+left: -90%;
+}
+
+.navbar .dropdown .dropdown:hover>a {
+left: -100%;
+}
+}
+
+/**
+* Mobile Navigation 
+*/
+.mobile-nav-toggle {
+color: #fff;
+font-size: 28px;
+cursor: pointer;
+display: none;
+line-height: 0;
+transition: 0.5s;
+}
+
+@media (max-width: 991px) {
+.mobile-nav-toggle {
+display: block;
+}
+.navbar ul {
+display: none;
+}
+}
+
+.navbar-mobile {
+position: fixed;
+overflow: hidden;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+background: rgba(34, 34, 34, 0.9);
+transition: 0.3s;
+z-index: 999;
+}
+
+.navbar-mobile .mobile-nav-toggle {
+position: absolute;
+top: 15px;
+right: 15px;
+}
+
+.navbar-mobile ul {
+display: block;
+position: absolute;
+top: 55px;
+right: 15px;
+bottom: 15px;
+left: 15px;
+padding: 10px 0;
+border-radius: 8px;
+background-color: #fff;
+overflow-y: auto;
+transition: 0.3s;
+}
+
+.navbar-mobile a,
+.navbar-mobile a:focus {
+padding: 10px 20px;
+font-size: 15px;
+color: #555;
+}
+
+.navbar-mobile a:hover,
+.navbar-mobile .active,
+.navbar-mobile li:hover>a {
+color: #199EB8;
+}
+
+.navbar-mobile .getstarted,
+.navbar-mobile .getstarted:focus {
+margin: 15px;
+}
+
+.navbar-mobile .dropdown  {
+position: static;
+display: none;
+margin: 10px 20px;
+padding: 10px 0;
+z-index: 99;
+opacity: 1;
+visibility: visible;
+background: #fff;
+box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+}
+
+.navbar-mobile .dropdown  {
+min-width: 200px;
+}
+
+.navbar-mobile .dropdown  a {
+padding: 10px 20px;
+}
+
+.navbar-mobile .dropdown  a i {
+font-size: 12px;
+}
+
+.navbar-mobile .dropdown ul a:hover,
+.navbar-mobile .dropdown ul .active:hover,
+.navbar-mobile .dropdown ul li:hover>a {
+color: #199EB8;
+}
+
+.navbar-mobile .dropdown>.dropdown-active {
+display: block;
+}
+
+/*--------------------------------------------------------------
+# Hero Section
+--------------------------------------------------------------*/
+.hero {
+display: table;
+position: relative;
+background-image: url(../images/back22.jpg);
+background-size: cover;
+padding: 150px 0;
+color: #fff;
+width: 100%;
+height: 100vh;
+}
+.hero2{
+color: #000;
+}
+
+.hero:after {
+content: "";
+z-index: 0;
+position: absolute;
+background: rgba(0, 0, 0, 0);
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+}
+
+.hero .container {
+position: relative;
+z-index: 1;
+text-align: center;
+display: table-cell;
+vertical-align: middle;
+width: 100%;
+}
+
+.hero-brand {
+margin-bottom: 75px;
+display: inline-block;
+}
+
+.hero-brand:hover {
+opacity: 0.75;
+}
+
+.tagline {
+font-family: "Raleway", Helvetica, Arial, sans-serif;
+font-size: 26px;
+margin: 45px 0 75px 0;
+color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Stats
+--------------------------------------------------------------*/
+.stats-row {
+margin-top: 65px;
+}
+
+.stats-col .circle {
+display: inline-block;
+width: 160px;
+height: 160px;
+font-family: "Raleway", Helvetica, Arial, sans-serif;
+font-weight: 500;
+color: #666;
+border: 6px solid #199EB8;
+border-radius: 50%;
+padding: 55px 25px 0 25px;
+position: relative;
+}
+
+.stats-col .circle .stats-no {
+color: #fff;
+width: 70px;
+height: 70px;
+line-height: 70px;
+top: -25px;
+right: -15px;
+font-family: "Raleway", Helvetica, Arial, sans-serif;
+font-size: 18px;
+background-color: #E04F00;
+position: absolute;
+border-radius: 50%;
+font-weight: 700;
+}
+
+/*--------------------------------------------------------------
+# Breadcrumbs
+--------------------------------------------------------------*/
+.breadcrumbs {
+padding: 20px 0;
+background-color: #fafafa;
+min-height: 40px;
+}
+
+.breadcrumbs h2 {
+font-size: 24px;
+font-weight: 300;
+margin: 0;
+}
+
+@media (max-width: 992px) {
+.breadcrumbs h2 {
+margin: 0 0 10px 0;
+}
+}
+
+.breadcrumbs ol {
+display: flex;
+flex-wrap: wrap;
+list-style: none;
+padding: 0;
+margin: 0;
+font-size: 14px;
+}
+
+.breadcrumbs ol li+li {
+padding-left: 10px;
+}
+
+.breadcrumbs ol li+li::before {
+display: inline-block;
+padding-right: 10px;
+color: #6c757d;
+content: "/";
+}
+
+@media (max-width: 768px) {
+.breadcrumbs .d-flex {
+display: block !important;
+}
+
+.breadcrumbs ol {
+display: block;
+}
+
+.breadcrumbs ol li {
+display: inline-block;
+}
+}
+
+.feature h1{
+
+font-family: "Poppins",Sans-serif;
+font-size: 52px;
+font-weight: 700;
+line-height: 1.2em;
+}
+
+.features {
+padding-bottom: 45px;
+}
+
+.features h2 {
+color:#ef642a;
+}
+
+.feature-col {
+display: table;
+padding-bottom: 45px;
+}
+
+.feature-col>div>div {
+display: table-cell;
+vertical-align: middle;
+}
+
+.feature-col>div>div:last-child {
+padding-left: 20px;
+}
+
+.feature-col .feature-icon {
+width: 70px;
+height: 70px;
+margin-bottom: 15px;
+background: #ef642a;
+color: #000;
+font-size: 24px;
+text-align: center;
+border-radius: 50%;
+display: inline-flex;
+align-items: center;
+justify-content: center;
+line-height: 0;
+}
+
+.feature-col h3 {
+color: #ef642a;
+}
+
+.feature-col p {
+font-family: "Roboto", Helvetica, Arial, sans-serif;
+font-size: 14px;
+color: #999;
+}
+
+
+/* ==================================================
+Portfolio Styling
+================================================== */
+.portfolio {
+background-color: #ffe5da;
+padding-bottom: 0;
+}
+
+.portfolio h2 {
+color: #ef642a;
+margin-bottom: 25px;
+}
+
+.portfolio-grid {
+margin-top: 65px;
+}
+
+.portfolio-grid .row {
+margin: 0;
+}
+
+.portfolio-grid .row>div {
+padding: 0;
+}
+
+.portfolio-grid .row>div .card img {
+width: 100%;
+}
+
+.portfolio-grid .row>div .card .portfolio-over {
+position: absolute;
+display: table-cell;
+vertical-align: middle;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.8);
+top: 0;
+left: 0;
+text-align: center;
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s ease;
+}
+
+.portfolio-grid .row>div .card .portfolio-over>div {
+position: relative;
+top: 50%;
+transform: translateY(-50%);
+}
+
+.portfolio-grid .row>div .card .portfolio-over .card-title {
+color: #fff;
+font-size: 30px;
+}
+
+.portfolio-grid .row>div .card .portfolio-over .card-text {
+color: #fff;
+opacity: 0.75;
+padding: 0 45px;
+}
+
+.portfolio-grid .row>div .card:hover .portfolio-over {
+opacity: 1;
+visibility: visible;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+.site-footer {
+background-color: #111;
+padding: 0;
+}
+
+.site-footer h2,
+.site-footer p {
+color: #fff;
+}
+
+.site-footer p {
+opacity: 0.75;
+line-height: 2.0925;
+}
+
+.site-footer h2,
+.site-footer .btn {
+margin-bottom: 25px;
+}
+
+.site-footer .social-nav a {
+color: #fff;
+opacity: 0.25;
+}
+
+.site-footer .social-nav a:hover {
+opacity: 1;
+}
+
+.site-footer .bottom {
+background-color: #000;
+padding: 20px 0;
+}
+
+.site-footer .bottom .list-inline,
+.site-footer .bottom p {
+margin: 0;
+}
+
+.site-footer .bottom .list-inline {
+position: relative;
+top: 5px;
+}
+
+.site-footer .bottom .list-inline a {
+color: #fff;
+font-family: "Roboto", Helvetica, Arial, sans-serif;
+margin-right: 15px;
+}
+
+.site-footer .bottom .list-inline a:hover {
+color: #199EB8;
+}
+
+.site-footer .credits {
+color: #ddd;
+}
+
+.site-footer .credits a {
+color: #199EB8;
+}
+
+/* ==================================================
+Responsive Styling
+================================================== */
+@media (max-width: 61.9em) {
+
+section,
+.block,
+.cta {
+padding: 35px 0;
+}
+
+.features {
+padding-bottom: 5px;
+}
+
+p,
+.block p {
+margin: 0;
+}
+
+.hero-brand {
+margin-bottom: 35px;
+}
+
+.tagline {
+margin: 35px 0;
+}
+
+h1 {
+font-size: 32px;
+margin: 0;
+}
+
+h2,
+.tagline {
+font-size: 24px;
+}
+
+h2 {
+margin-bottom: 25px;
+}
+
+h3 {
+font-size: 14px;
+}
+
+.hero {
+padding: 75px 0;
+}
+
+.stats-col {
+margin-bottom: 25px;
+}
+
+.block {
+height: auto;
+}
+
+.feature-col {
+padding-bottom: 30px;
+}
+
+.portfolio-grid .card h3.card-title {
+font-size: 18px !important;
+}
+
+.portfolio-grid .card .card-text {
+font-size: 13px;
+}
+
+.team .team-over {
+padding-top: 20px;
+}
+
+.team .card .social-nav {
+margin-bottom: 15px;
+padding: 0;
+}
+
+.site-footer .social-nav {
+margin-bottom: 35px;
+}
+
+.site-footer .list-inline {
+text-align: center;
+padding-bottom: 15px;
+}
+
+.site-footer .list-inline li {
+display: inline-block;
+}
+}
+
+@media (max-width: 767px) {
+.block {
+padding-left: 30px;
+padding-right: 30px;
+}
+}
+
+#mainNav {
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+z-index: 1030;
+border-bottom: 1px solid #dee2e6;
+background-color: #0000007d;;
+color: #000;
+font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+#mainNav .navbar-brand {
+font-weight: 800;
+color: #fff;
+}
+#mainNav .navbar-toggler {
+font-size: 0.75rem;
+font-weight: 800;
+padding: 0.75rem;
+text-transform: uppercase;
+color: #fff;
+}
+.navbar-collapse {
+    flex-grow: initial;
+
+}
+#mainNav .navbar-nav >  a.nav-link {
+font-size: 0.75rem;
+font-weight: 800;
+letter-spacing: 0.0625em;
+text-transform: uppercase;
+color: rgb(255 253 253 / 76%);
+}
+@media (min-width: 992px) {
+#mainNav {
+border-bottom: 1px solid transparent;
+background: #0000007d;;
+}
+#mainNav .navbar-brand {
+color: #fff;
+}
+#mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+color: rgb(168 59 59 / 80%);
+}
+#mainNav .navbar-nav > a.nav-link {
+color: #fff;
+}
+#mainNav .navbar-nav > a.nav-link:focus, #mainNav .navbar-nav >  a.nav-link:hover {
+color: rgb(168 59 59 / 80%);
+}
+}
+@media (min-width: 992px) {
+#mainNav {
+transition: background-color 0.2s;
+/* Force Hardware Acceleration in WebKit */
+transform: translate3d(0, 0, 0);
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+}
+#mainNav.is-fixed {
+/* when the user scrolls down, we hide the header right above the viewport */
+position: fixed;
+top: -83px;
+transition: transform 0.2s;
+border-bottom: 1px solid white;
+background-color: rgba(255, 255, 255, 0.9);
+}
+#mainNav.is-fixed .navbar-brand {
+color: #212529;
+}
+#mainNav.is-fixed .navbar-brand:focus, #mainNav.is-fixed .navbar-brand:hover {
+color: #0085A1;
+}
+#mainNav.is-fixed .navbar-nav  > a {
+color: #212529;
+}
+#mainNav.is-fixed .navbar-nav >  a:focus, #mainNav.is-fixed .navbar-nav >  a:hover {
+color: #0085A1;
+}
+#mainNav.is-visible {
+/* if the user changes the scrolling direction, we show the header */
+transform: translate3d(0, 100%, 0);
+}
+}
+/* Css step by step*/
+    #signUpForm {
+      max-width: 70%;
+        background-color: #ffffff;
+        margin: 40px auto;
+        padding: 40px;
+        box-shadow: 0px 6px 18px rgb(0 0 0 / 9%);
+        border-radius: 12px;
+        position: inherit;
+            z-index: 2;
+    }
+    #signUpForm .form-header {
+        gap: 5px;
+        text-align: center;
+        font-size: .9em;
+    }
+    #signUpForm .form-header .stepIndicator {
+        position: relative;
+        flex: 1;
+        padding-bottom: 30px;
+
+    }
+    #signUpForm .form-header .stepIndicator.active {
+        font-weight: 600;
+    }
+    #signUpForm .form-header .stepIndicator.finish {
+        font-weight: 600;
+        color: #009688;
+    }
+    #signUpForm .form-header .stepIndicator::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        z-index: 9;
+        width: 20px;
+        height: 20px;
+        background-color: #d5efed;
+        border-radius: 50%;
+        border: 3px solid #ecf5f4;
+    }
+    #signUpForm .form-header .stepIndicator.active::before {
+        background-color: #a7ede8;
+        border: 3px solid #d5f9f6;
+    }
+    #signUpForm .form-header .stepIndicator.finish::before {
+        background-color: #009688;
+        border: 3px solid #b7e1dd;
+    }
+    #signUpForm .form-header .stepIndicator::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: 8px;
+        width: 100%;
+        height: 3px;
+        background-color: #f3f3f3;
+    }
+    #signUpForm .form-header .stepIndicator.active::after {
+        background-color: #a7ede8;
+    }
+    #signUpForm .form-header .stepIndicator.finish::after {
+        background-color: #009688;
+    }
+    #signUpForm .form-header .stepIndicator:last-child:after {
+        display: none;
+    }
+    #signUpForm input {
+        padding: 15px 20px;
+
+        font-size: 1em;
+        border: 1px solid #e3e3e3;
+        border-radius: 5px;
+    }
+    #signUpForm input:focus {
+        border: 1px solid #009688;
+        outline: 0;
+    }
+    #signUpForm input.invalid {
+        border: 1px solid #ffaba5;
+    }
+    #signUpForm .step {
+      display: none;
+    }
+    #signUpForm .form-footer{
+        overflow:auto;
+        gap: 20px;
+    }
+    #signUpForm .form-footer button{
+        background-color: #009688;
+        border: 1px solid #009688 !important;
+        color: #ffffff;
+        border: none;
+        padding: 13px 30px;
+        font-size: 1em;
+        cursor: pointer;
+        border-radius: 5px;
+        flex: 1;
+        margin-top: 5px;
+    }
+    #signUpForm .form-footer button:hover {
+      opacity: 0.8;
+    }
+
+    #signUpForm .form-footer #prevBtn {
+        background-color: #fff;
+        color: #009688;
+    }
+

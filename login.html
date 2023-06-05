@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+
+    <!-- Google Fonts ●	Use web fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700|Roboto:400,900" rel="stylesheet">
+    <!-- External Css-->
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <style>
+    .btn-group {
+        display: table;
+            border: 1px solid #00000012;
+            padding: 10px;}
+.btn-group .select {
+	 position: relative;
+	color:black;
+	display: inline-block;
+}
+
+
+ .btn-group .select input:checked + label {
+	 background-color: #ffc107;
+}
+ .btn-group .select input:checked + label:hover, .btn-group .select input:checked + label:focus, .btn-group .select input:checked + label:active {
+	 background-color: #E04F00;
+color: #fff;
+}
+ .btn-group .select input {
+	 opacity: 0;
+	 position: absolute;
+
+}
+ .btn-group .select .button_select {
+	 margin: 0 10px 10px 0;
+	 display: flex;
+		 background-color: #fff;
+	 color:black;
+	 padding: 10px 10px;
+	     border-radius: 2px;
+	     border: 1px solid #eee;
+	     font-weight: 100;
+}
+ .btn-group .select .button_select:hover, .btn-group .select .button_select:focus, .btn-group .select .button_select:active {
+	 background-color: #199EB8;
+color: #fff;
+}
+ .option {
+	 position: relative;
+}
+ .option input {
+	 opacity: 0;
+	 position: absolute;
+}
+ .option input:checked + span {
+	 background-color: #ffc107;
+}
+ .option input:checked + span:hover, .option input:checked + span:focus, .option input:checked + span:active {
+	 background-color: #E04F00;
+color: #fff;
+}
+ .option .btn-option {
+	 margin: 0 10px 10px 0;
+	 display: flex;
+	 	 background-color: #fff;
+	 color:black;
+	 padding: 10px 10px;
+	     border-radius: 2px;
+	     border: 1px solid #eee;
+	     font-weight: 100;
+}
+ .option .btn-option:hover, .option .btn-option:focus, .option .btn-option:active {
+	background-color: #E04F00;
+color: #fff;
+}
+.header{
+display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: left;
+}
+
+.table {
+  padding: 2rem 0rem;
+}
+
+.table h4 {
+  margin: 2rem 0rem 1rem;
+}
+
+.table-image {
+  td, th {
+    vertical-align: middle;
+  }
+}
+.button{
+background-color: #009688;
+    border: 1px solid #009688 !important;
+    color: #ffffff;
+    border: none;
+    padding: 13px 30px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    flex: 1;
+    margin-top: 5px;
+
+}
+    </style>
+</head>
+<body>
+
+
+<!-- Nav bar -->
+<nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+    <div class="container px-4 px-lg-5">
+        <a class="navbar-brand" href="index.html"><img alt="Bell Logo" src="assets/images/logo.svg">Fresh Salad</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <div class="navbar-nav ">
+                <a class="nav-item nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a>
+                <a class="nav-item nav-link px-lg-3 py-3 py-lg-4" href="#portfolio">Portfolio</a>
+                <a class=" nav-item nav-link px-lg-3 py-3 py-lg-4" href="#features">Features</a>
+                <a class="nav-item nav-link px-lg-3 py-3 py-lg-4" href="#about">About</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- end Nav bar -->
+
+<!-- Hero section -->
+<section id="hero" class="hero" style=" background-image: url(assets/images/back3.jpeg);color:#000;">
+
+    <!-- Step by Step-->
+
+    <form id="signUpForm" name="myForm" onsubmit="return(validate());">
+        <h2 class="text-center mb-4">SignUp</h2>
+
+            <p class="text-center mb-4">Enter your information</p>
+
+            <div class="mb-3" style="display: grid;"><label>Name: </label>
+                <input type="text" placeholder="Full name" id="Full_name" oninput="this.className = ''" name="fullname">
+                <span class="nameValidation"></span>
+            </div>
+            <div class="mb-3" style="display: grid;">
+                <label>Mobile: </label>
+                <input type="text" placeholder="Mobile" id="mobile" oninput="this.className = ''" name="mobile">
+                <span class="mobileValidation"></span>
+            </div>
+        <div class="mb-3" style="display: grid;">
+            <label>Email: </label>
+            <input type="email" placeholder="Email" id="email" oninput="this.className = ''" name="email" pattern="^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$">
+            <span class="emailValidation"></span>
+        </div>
+
+            <div class="mb-3" style="display: grid;">
+                <label>Password: </label>
+                <input type="password" placeholder="Password" id="password" oninput="this.className = ''" name="password">
+                <span class="passwordValidation"></span>
+            </div>
+        <div class="mb-3" style="display: grid;">
+
+    <label>Gender : </label>
+            <div class="btn-group">
+            <select name="gender" id="gender">
+                <option value="ccc">-Select Gender-</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+                <span class="genderValidation"></span>
+        </div>
+        </div>
+        <!-- start previous / next buttons -->
+        <div class="form-footer d-flex">
+            <input type="submit" value="submit"  class="button">
+        </div>
+        <!-- end previous / next buttons -->
+    </form>
+
+
+</section>
+<!-- end  Hero section -->
+
+<!--  Footer -->
+<footer class="site-footer">
+    <div class="bottom">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-xs-12 text-lg-start text-center">
+                    <p class="copyright-text">
+                        &copy; Copyright <strong>Fresh Salad</strong>. All Rights Reserved
+                    </p>
+                </div>
+
+                <div class="col-lg-6 col-xs-12 text-lg-right text-center">
+                    <ul class="list-inline">
+                        <li class="list-inline-item">
+                            <a href="index.html">Home</a>
+                        </li>
+
+                        <li class="list-inline-item">
+                            <a href="#features">Features</a>
+                        </li>
+
+                        <li class="list-inline-item">
+                            <a href="#portfolio">Portfolio</a>
+                        </li>
+
+
+                        <li class="list-inline-item">
+                            <a href="#about">About</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</footer><!-- End Footer -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<script>
+function validateEmail() {
+  let emailID = document.myForm.email.value;
+
+  atpos = emailID.indexOf("@");
+  dotpos = emailID.lastIndexOf(".");
+  if (atpos < 1 || ( dotpos - atpos < 2 )) {
+      let x = document.querySelector(".emailValidation");
+    x.style.color='red'
+    x.innerHTML = 'invalid email format';
+    return false;
+  } else {
+
+  let x = document.querySelector(".emailValidation");
+   x.innerHTML = '';
+    return true;
+  }
+  return( true )
+}
+
+
+function validateMobile(){
+ let mobile = document.myForm.mobile.value;
+var phoneno = /^\d{10}$/;
+  if(mobile.match(phoneno)){
+
+  let x = document.querySelector(".mobileValidation");
+   x.innerHTML = '';
+      return true;
+  }
+  else{
+
+      let x = document.querySelector(".mobileValidation");
+       x.style.color='red'
+       x.innerHTML = 'Mobile number must be 10 digits';
+     return false;
+}
+}
+    function validate(){
+
+
+    if (document.myForm.fullname.value == "") {
+       x = document.querySelector(".nameValidation");
+    x.style.color='red'
+    x.innerHTML = 'Please provide your Name';
+    return false;
+  } else {
+   x = document.querySelector(".nameValidation");
+    x.style.color='red'
+    x.innerHTML = '';
+    let NAME = document.getElementById("Full_name").value;
+  }
+
+     if (document.myForm.mobile.value == "") {
+
+      x = document.querySelector(".mobileValidation");
+    x.style.color='red'
+    x.innerHTML = 'Please provide your Mobile';
+    return false;
+  } else {
+    if(validateMobile()){
+     x = document.querySelector(".mobileValidation");
+    x.style.color='red'
+    x.innerHTML = '';
+     let mobile = document.getElementById("mobile").value;
+    }else{
+    return false;
+    }
+    let mobile = document.getElementById("mobile").value;
+  }
+
+  if (document.myForm.email.value == "") {
+     x = document.querySelector(".emailValidation");
+    x.style.color='red'
+    x.innerHTML = 'Please provide your Email';
+    return false;
+  }
+  if (document.myForm.email.value != "") {
+    if (validateEmail()) {
+       x = document.querySelector(".emailValidation");
+    x.style.color='red'
+    x.innerHTML = '';
+      let emailValue = document.getElementById("email").value;
+    }else{
+    return false;}
+  }
+
+
+  if (document.myForm.password.value == "") {
+       x = document.querySelector(".passwordValidation");
+    x.style.color='red'
+    x.innerHTML = 'Please provide your password';
+    return false;
+  } else {
+       x = document.querySelector(".passwordValidation");
+    x.style.color='red'
+    x.innerHTML = '';
+    let pass = document.getElementById("password").value;
+
+  }
+  var card = document.getElementById("gender");
+  var selected = $('#gender').find(":selected").val();
+  if (card[0].value == selected){
+     x = document.querySelector(".genderValidation");
+    x.style.color='red'
+    x.innerHTML = 'Please select your gender';
+    return false;
+  }else{
+    x = document.querySelector(".genderValidation");
+    x.style.color='red'
+    x.innerHTML = '';
+  }
+  alert("everything is right");
+return true;;
+
+    }
+
+
+</script>
+</body>
+</html>
